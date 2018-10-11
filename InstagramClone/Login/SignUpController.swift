@@ -47,12 +47,12 @@ class SignUpController: UIViewController, UIImagePickerControllerDelegate, UINav
         tf.backgroundColor = UIColor(white: 0, alpha: 0.03)
         tf.borderStyle = .roundedRect
         tf.font = UIFont.systemFont(ofSize: 14)
-        tf.addTarget(self, action: #selector(handleTextINputChange), for: .editingChanged)
+        tf.addTarget(self, action: #selector(handleTextInputChange), for: .editingChanged)
         
         return tf
     }()
     
-    @objc func handleTextINputChange() {
+    @objc func handleTextInputChange() {
         let isFormValid =
             emailTextField.text?.count ?? 0 > 0 &&
                 usernameTextField.text?.count ?? 0 > 0 &&
@@ -73,7 +73,7 @@ class SignUpController: UIViewController, UIImagePickerControllerDelegate, UINav
         tf.backgroundColor = UIColor(white: 0, alpha: 0.03)
         tf.borderStyle = .roundedRect
         tf.font = UIFont.systemFont(ofSize: 14)
-        tf.addTarget(self, action: #selector(handleTextINputChange), for: .editingChanged)
+        tf.addTarget(self, action: #selector(handleTextInputChange), for: .editingChanged)
         
         return tf
     }()
@@ -85,7 +85,7 @@ class SignUpController: UIViewController, UIImagePickerControllerDelegate, UINav
         tf.backgroundColor = UIColor(white: 0, alpha: 0.03)
         tf.borderStyle = .roundedRect
         tf.font = UIFont.systemFont(ofSize: 14)
-        tf.addTarget(self, action: #selector(handleTextINputChange), for: .editingChanged)
+        tf.addTarget(self, action: #selector(handleTextInputChange), for: .editingChanged)
         
         return tf
     }()
@@ -147,6 +147,12 @@ class SignUpController: UIViewController, UIImagePickerControllerDelegate, UINav
                         }
                         
                         print("Sucessfully saved user info to db")
+                        
+                        guard let mainTabBarController = UIApplication.shared.keyWindow?.rootViewController as? MainTabBarController else { return }
+                        
+                        mainTabBarController.setupViewControllers()
+                        
+                        self.dismiss(animated: true, completion: nil)
                     }
                 }
             }

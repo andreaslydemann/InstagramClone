@@ -38,6 +38,10 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
         alertController.addAction(UIAlertAction(title: "Log out", style: .destructive, handler: { (_) in
             do {
                 try Auth.auth().signOut()
+                
+                let loginController = LoginController()
+                let navController = UINavigationController(rootViewController: loginController)
+                self.present(navController, animated: true, completion: nil)
             } catch let signOutErr {
                 print("Failed to sign out:", signOutErr)
             }
