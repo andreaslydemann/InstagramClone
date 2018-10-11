@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0632570E1C8E2DEF0625C3F6 /* Pods_InstagramClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC089D3AD6FF8FF1E3DCE5C9 /* Pods_InstagramClone.framework */; };
 		E106DD472168CCC200BAD5EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E106DD462168CCC200BAD5EA /* AppDelegate.swift */; };
-		E106DD492168CCC200BAD5EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E106DD482168CCC200BAD5EA /* ViewController.swift */; };
+		E106DD492168CCC200BAD5EA /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E106DD482168CCC200BAD5EA /* SignUpController.swift */; };
 		E106DD4C2168CCC200BAD5EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E106DD4A2168CCC200BAD5EA /* Main.storyboard */; };
 		E106DD4E2168CCC300BAD5EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E106DD4D2168CCC300BAD5EA /* Assets.xcassets */; };
 		E106DD512168CCC300BAD5EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E106DD4F2168CCC300BAD5EA /* LaunchScreen.storyboard */; };
@@ -18,6 +18,7 @@
 		E1225C16216D4AF40002389E /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1225C15216D4AF40002389E /* MainTabBarController.swift */; };
 		E1225C18216D4BCC0002389E /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1225C17216D4BCC0002389E /* UserProfileController.swift */; };
 		E1225C1B216D52800002389E /* UserProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1225C1A216D52800002389E /* UserProfileHeader.swift */; };
+		E1225C1E216FD7170002389E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1225C1D216FD7170002389E /* LoginController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +26,7 @@
 		CBD48346572CF809C90763EA /* Pods-InstagramClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramClone/Pods-InstagramClone.release.xcconfig"; sourceTree = "<group>"; };
 		E106DD432168CCC200BAD5EA /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E106DD462168CCC200BAD5EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E106DD482168CCC200BAD5EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E106DD482168CCC200BAD5EA /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		E106DD4B2168CCC200BAD5EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E106DD4D2168CCC300BAD5EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E106DD502168CCC300BAD5EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +36,7 @@
 		E1225C15216D4AF40002389E /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		E1225C17216D4BCC0002389E /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
 		E1225C1A216D52800002389E /* UserProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileHeader.swift; sourceTree = "<group>"; };
+		E1225C1D216FD7170002389E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		FC089D3AD6FF8FF1E3DCE5C9 /* Pods_InstagramClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -88,11 +90,11 @@
 		E106DD452168CCC200BAD5EA /* InstagramClone */ = {
 			isa = PBXGroup;
 			children = (
+				E1225C1C216FD6F80002389E /* Login */,
 				E1225C19216D52680002389E /* UserProfile */,
 				E106DD5821692AAB00BAD5EA /* Utils */,
 				E106DD462168CCC200BAD5EA /* AppDelegate.swift */,
 				E1225C15216D4AF40002389E /* MainTabBarController.swift */,
-				E106DD482168CCC200BAD5EA /* ViewController.swift */,
 				E106DD4A2168CCC200BAD5EA /* Main.storyboard */,
 				E106DD4D2168CCC300BAD5EA /* Assets.xcassets */,
 				E106DD4F2168CCC300BAD5EA /* LaunchScreen.storyboard */,
@@ -117,6 +119,15 @@
 				E1225C1A216D52800002389E /* UserProfileHeader.swift */,
 			);
 			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		E1225C1C216FD6F80002389E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E1225C1D216FD7170002389E /* LoginController.swift */,
+				E106DD482168CCC200BAD5EA /* SignUpController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,12 +255,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E106DD492168CCC200BAD5EA /* ViewController.swift in Sources */,
+				E106DD492168CCC200BAD5EA /* SignUpController.swift in Sources */,
 				E106DD5A21692ACB00BAD5EA /* Extensions.swift in Sources */,
 				E1225C16216D4AF40002389E /* MainTabBarController.swift in Sources */,
 				E1225C1B216D52800002389E /* UserProfileHeader.swift in Sources */,
 				E1225C18216D4BCC0002389E /* UserProfileController.swift in Sources */,
 				E106DD472168CCC200BAD5EA /* AppDelegate.swift in Sources */,
+				E1225C1E216FD7170002389E /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

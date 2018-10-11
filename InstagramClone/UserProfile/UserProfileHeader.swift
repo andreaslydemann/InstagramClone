@@ -146,13 +146,13 @@ class UserProfileHeader: UICollectionViewCell {
         addSubview(bottomDividerView)
         
         stackView.anchor(top: nil, leading: self.leftAnchor, bottom: self.bottomAnchor, trailing: self.rightAnchor,
-                                padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 50))
+                         padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 50))
         
         topDividerView.anchor(top: stackView.topAnchor, leading: self.leftAnchor, bottom: nil, trailing: self.rightAnchor,
-                               padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 0.5))
+                              padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 0.5))
         
         bottomDividerView.anchor(top: stackView.bottomAnchor, leading: self.leftAnchor, bottom: nil, trailing: self.rightAnchor,
-                              padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 0.5))
+                                 padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 0.5))
     }
     
     fileprivate func setupProfileImage() {
@@ -176,9 +176,7 @@ class UserProfileHeader: UICollectionViewCell {
             DispatchQueue.main.async {
                 self.profileImageView.image = image
             }
-            
-            self.profileImageView.image = image
-            }.resume()
+        }.resume()
     }
     
     required init?(coder aDecoder: NSCoder) {
