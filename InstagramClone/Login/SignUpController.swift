@@ -180,14 +180,14 @@ class SignUpController: UIViewController, UIImagePickerControllerDelegate, UINav
         super.viewDidLoad()
         
         view.addSubview(alreadyHaveAccountButton)
-        alreadyHaveAccountButton.anchor(top: nil, leading: view.leftAnchor, bottom: view.bottomAnchor, trailing: view.rightAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 50))
+        alreadyHaveAccountButton.anchor(top: nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 50))
         
         view.backgroundColor = .white
         
         view.addSubview(plusPhotoButton)
         view.addSubview(emailTextField)
         
-        plusPhotoButton.anchor(top: view.topAnchor, leading: nil, bottom: nil, trailing: nil,
+        plusPhotoButton.anchor(top: view.topAnchor, left: nil, bottom: nil, right: nil,
                                padding: .init(top: 40, left: 0, bottom: 0, right: 0), size: .init(width: 140, height: 140))
         plusPhotoButton.anchorCenter(to: view, horizontally: true, vertically: false)
         
@@ -202,51 +202,9 @@ class SignUpController: UIViewController, UIImagePickerControllerDelegate, UINav
         stackView.spacing = 10
         
         view.addSubview(stackView)
-        // [redView, blueView].forEach { view.adSubview($0) }
+        // [redView, blueView].forEach { view.addSubview($0) }
         
-        stackView.anchor(top: plusPhotoButton.bottomAnchor, leading: view.leftAnchor, bottom: nil, trailing: view.rightAnchor,
+        stackView.anchor(top: plusPhotoButton.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor,
                          padding: .init(top: 20, left: 40, bottom: 0, right: 40), size: .init(width: 0, height: 200))
-    }
-}
-
-extension UIView {
-    
-    func anchorCenter(to view: UIView, horizontally: Bool = false, vertically: Bool = false) {
-        if horizontally {
-            centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        }
-        
-        if vertically {
-            centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        }
-    }
-    
-    func anchor(top: NSLayoutYAxisAnchor?, leading: NSLayoutXAxisAnchor?, bottom: NSLayoutYAxisAnchor?,
-                trailing: NSLayoutXAxisAnchor?, padding: UIEdgeInsets = .zero, size: CGSize = .zero) {
-        translatesAutoresizingMaskIntoConstraints = false
-        
-        if let top = top {
-            topAnchor.constraint(equalTo: top, constant: padding.top).isActive = true
-        }
-        
-        if let leading = leading {
-            leftAnchor.constraint(equalTo: leading, constant: padding.left).isActive = true
-        }
-        
-        if let bottom = bottom {
-            bottomAnchor.constraint(equalTo: bottom, constant: padding.bottom).isActive = true
-        }
-        
-        if let trailing = trailing {
-            rightAnchor.constraint(equalTo: trailing, constant: -padding.right).isActive = true
-        }
-        
-        if size.width != 0 {
-            widthAnchor.constraint(equalToConstant: size.width).isActive = true
-        }
-        
-        if size.height != 0 {
-            heightAnchor.constraint(equalToConstant: size.height).isActive = true
-        }
     }
 }

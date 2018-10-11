@@ -91,7 +91,7 @@ class LoginController: UIViewController {
         attributedTitle.append(NSAttributedString(string: "Sign Up", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor.rgb(red: 17, green: 157, blue: 237)]))
         
         button.setAttributedTitle(attributedTitle, for: .normal)
-
+        
         button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
         return button
     }()
@@ -103,7 +103,7 @@ class LoginController: UIViewController {
         logoImageView.contentMode = .scaleAspectFill
         
         view.addSubview(logoImageView)
-        logoImageView.anchor(top: nil, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 200, height: 50))
+        logoImageView.anchor(top: nil, left: nil, bottom: nil, right: nil, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 200, height: 50))
         logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         logoImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         
@@ -125,13 +125,13 @@ class LoginController: UIViewController {
         super.viewDidLoad()
         
         view.addSubview(logoContainerView)
-        logoContainerView.anchor(top: view.topAnchor, leading: view.leftAnchor, bottom: nil, trailing: view.rightAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 150))
+        logoContainerView.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 150))
         navigationController?.isNavigationBarHidden = true
         
         view.backgroundColor = .white
         
         view.addSubview(dontHaveAccountButton)
-        dontHaveAccountButton.anchor(top: nil, leading: view.leftAnchor, bottom: view.bottomAnchor, trailing: view.rightAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 50))
+        dontHaveAccountButton.anchor(top: nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 50))
         
         setupInputFields()
     }
@@ -144,6 +144,6 @@ class LoginController: UIViewController {
         stackView.distribution = .fillEqually
         
         view.addSubview(stackView)
-        stackView.anchor(top: logoContainerView.bottomAnchor, leading: view.leftAnchor, bottom: nil, trailing: view.rightAnchor, padding: .init(top: 40, left: 40, bottom: 0, right: 40), size: .init(width: 0, height: 140))
+        stackView.anchor(top: logoContainerView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, padding: .init(top: 40, left: 40, bottom: 0, right: 40), size: .init(width: 0, height: 140))
     }
 }

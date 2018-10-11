@@ -102,7 +102,7 @@ class UserProfileHeader: UICollectionViewCell {
         super.init(frame: frame)
         
         addSubview(profileImageView)
-        profileImageView.anchor(top: self.topAnchor, leading: self.leftAnchor, bottom: nil, trailing: nil,
+        profileImageView.anchor(top: self.topAnchor, left: self.leftAnchor, bottom: nil, right: nil,
                                 padding: .init(top: 12, left: 12, bottom: 0, right: 0), size: .init(width: 80, height: 80))
         profileImageView.layer.cornerRadius = 80 / 2
         profileImageView.clipsToBounds = true
@@ -110,13 +110,13 @@ class UserProfileHeader: UICollectionViewCell {
         setupBottomToolbar()
         
         addSubview(usernameLabel)
-        usernameLabel.anchor(top: profileImageView.bottomAnchor, leading: leftAnchor, bottom: gridButton.topAnchor, trailing: rightAnchor,
+        usernameLabel.anchor(top: profileImageView.bottomAnchor, left: leftAnchor, bottom: gridButton.topAnchor, right: rightAnchor,
                              padding: .init(top: 4, left: 12, bottom: 0, right: 12), size: .init(width: 0, height: 0))
         
         setupUserStatsView()
         
         addSubview(editProfileButton)
-        editProfileButton.anchor(top: postsLabel.bottomAnchor, leading: postsLabel.leftAnchor, bottom: nil, trailing: followingLabel.rightAnchor,
+        editProfileButton.anchor(top: postsLabel.bottomAnchor, left: postsLabel.leftAnchor, bottom: nil, right: followingLabel.rightAnchor,
                                  padding: .init(top: 2, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 34))
     }
     
@@ -126,7 +126,7 @@ class UserProfileHeader: UICollectionViewCell {
         stackView.distribution = .fillEqually
         
         addSubview(stackView)
-        stackView.anchor(top: topAnchor, leading: profileImageView.rightAnchor, bottom: nil, trailing: rightAnchor, padding: .init(top: 12, left: 12, bottom: 0, right: 12), size: .init(width: 0, height: 50))
+        stackView.anchor(top: topAnchor, left: profileImageView.rightAnchor, bottom: nil, right: rightAnchor, padding: .init(top: 12, left: 12, bottom: 0, right: 12), size: .init(width: 0, height: 50))
     }
     
     fileprivate func setupBottomToolbar() {
@@ -145,13 +145,13 @@ class UserProfileHeader: UICollectionViewCell {
         addSubview(topDividerView)
         addSubview(bottomDividerView)
         
-        stackView.anchor(top: nil, leading: self.leftAnchor, bottom: self.bottomAnchor, trailing: self.rightAnchor,
+        stackView.anchor(top: nil, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor,
                          padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 50))
         
-        topDividerView.anchor(top: stackView.topAnchor, leading: self.leftAnchor, bottom: nil, trailing: self.rightAnchor,
+        topDividerView.anchor(top: stackView.topAnchor, left: self.leftAnchor, bottom: nil, right: self.rightAnchor,
                               padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 0.5))
         
-        bottomDividerView.anchor(top: stackView.bottomAnchor, leading: self.leftAnchor, bottom: nil, trailing: self.rightAnchor,
+        bottomDividerView.anchor(top: stackView.bottomAnchor, left: self.leftAnchor, bottom: nil, right: self.rightAnchor,
                                  padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 0.5))
     }
     
