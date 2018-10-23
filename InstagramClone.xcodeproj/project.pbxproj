@@ -20,6 +20,7 @@
 		E1225C1B216D52800002389E /* UserProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1225C1A216D52800002389E /* UserProfileHeader.swift */; };
 		E1225C1E216FD7170002389E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1225C1D216FD7170002389E /* LoginController.swift */; };
 		E1225C24217936C30002389E /* PhotoSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1225C23217936C30002389E /* PhotoSelectorController.swift */; };
+		E1225C26217FB28E0002389E /* PhotoSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1225C25217FB28E0002389E /* PhotoSelectorCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		E1225C1A216D52800002389E /* UserProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileHeader.swift; sourceTree = "<group>"; };
 		E1225C1D216FD7170002389E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		E1225C23217936C30002389E /* PhotoSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelectorController.swift; sourceTree = "<group>"; };
+		E1225C25217FB28E0002389E /* PhotoSelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelectorCell.swift; sourceTree = "<group>"; };
 		FC089D3AD6FF8FF1E3DCE5C9 /* Pods_InstagramClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				E1225C23217936C30002389E /* PhotoSelectorController.swift */,
+				E1225C25217FB28E0002389E /* PhotoSelectorCell.swift */,
 			);
 			path = AddPhoto;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E106DD492168CCC200BAD5EA /* SignUpController.swift in Sources */,
+				E1225C26217FB28E0002389E /* PhotoSelectorCell.swift in Sources */,
 				E106DD5A21692ACB00BAD5EA /* Extensions.swift in Sources */,
 				E1225C16216D4AF40002389E /* MainTabBarController.swift in Sources */,
 				E1225C1B216D52800002389E /* UserProfileHeader.swift in Sources */,
